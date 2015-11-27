@@ -21,12 +21,12 @@ $(document).ready(function(){
   });
   //favorite_btn
   $('.favorite_btn #btn_edit').click(function() {
-    $('.favorite_list').animate( { paddingLeft: '30px', }, 'fast' );
+    $('.favorite_list dl').animate( { paddingLeft: '30px', }, 'fast' );
     $('.favorite').addClass('edit');
     $(".favorite_check").prop("disabled", false);
   });
   $('.favorite_btn #btn_cancel').click(function() {
-    $('.favorite_list').animate( { paddingLeft: '0', }, 'fast' );
+    $('.favorite_list dl').animate( { paddingLeft: '0', }, 'fast' );
     $('.favorite').removeClass('edit');
     $(".favorite_check").prop("disabled", true);
   });

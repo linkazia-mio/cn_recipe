@@ -1,6 +1,11 @@
 /*favorite*/
 .favorite {
   &.edit {
+    .favorite_lists {
+      .favorite_check_btn {
+        display: block;
+      }
+    }
     .favorite_btn {
       li {
         &.btn_edit {
@@ -94,76 +99,89 @@
 .favorite_list {
   .favorite_lists {
     position: relative;
-    input {
-      @include opacity(0);
+    input[type=checkbox]{
+      display: none;
       position: absolute;
-      display: block;
       width: 100vw;
       height: 100%;
+      &:checked + .favorite_check_btn {
+        @include opacity(0.5);
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background: url(#{$img_path}check_circle_active.svg) no-repeat 5px center #ffaa1e;
+      }
     }
-  }
-  dl {
-    height: 100px;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid $boder_white;
-    dt {
-      display: table-cell;
-      width: 122px;
-      padding-left: 10px;
-      vertical-align: middle;
-      img {
-        height: 80px;
-        width: auto;
+    .favorite_check_btn {
+      position: absolute;
+      display: none;
+      width: 100vw;
+      height: 100%;
+      background: url(#{$img_path}check_circle.svg) no-repeat 5px center;
+    }
+    dl {
+      height: 100px;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid $boder_white;
+      dt {
+        display: table-cell;
+        width: 122px;
+        padding-left: 10px;
         vertical-align: middle;
-      }
-    }
-    dd {
-      @include fontsize(1.1);
-      padding: 0 10px 0 5px;
-      display: table-cell;
-      vertical-align: top;
-      .food_name {
-        @include fontsize(1.2);
-        font-weight: bold;
-        background: url(#{$img_path}icon_food.svg) no-repeat center left;
-        padding-left: 20px;
-        border-bottom: 2px solid $food_yellow;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin-bottom: 4px;
-      }
-      .baby_name {
-        @extend .food_name;
-        background: url(#{$img_path}icon_baby.svg) no-repeat center left;
-        background-size: 18px auto;
-        border-bottom: 2px solid $baby_pink;
-      }
-      /*signage_baby*/
-      .signage_baby {
-        margin: 0;
-        display: inline;
-        li {
-          @include border_radius(100);
-          @include fontsize(1.1);
-          font-weight: bold;
-          text-align: center;
-          padding: 1%;
-          margin: 0 2px 2px 0;
-          display: inline-block;
-          border: 2px solid $baby_pink;
-          color: $baby_pink;
-          min-width: 24px;
+        img {
+          height: 80px;
+          width: auto;
+          vertical-align: middle;
         }
       }
-      .signage_cook {
-        @extend .signage_baby;
-        li {
-          border: 2px solid $brown;
-          color: $brown;
+      dd {
+        @include fontsize(1.1);
+        padding: 0 10px 0 5px;
+        display: table-cell;
+        vertical-align: top;
+        .food_name {
+          @include fontsize(1.2);
+          font-weight: bold;
+          background: url(#{$img_path}icon_food.svg) no-repeat center left;
+          padding-left: 20px;
+          border-bottom: 2px solid $food_yellow;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-bottom: 4px;
+        }
+        .baby_name {
+          @extend .food_name;
+          background: url(#{$img_path}icon_baby.svg) no-repeat center left;
+          background-size: 18px auto;
+          border-bottom: 2px solid $baby_pink;
+        }
+        /*signage_baby*/
+        .signage_baby {
+          margin: 0;
+          display: inline;
+          li {
+            @include border_radius(100);
+            @include fontsize(1.1);
+            font-weight: bold;
+            text-align: center;
+            padding: 1%;
+            margin: 0 2px 2px 0;
+            display: inline-block;
+            border: 2px solid $baby_pink;
+            color: $baby_pink;
+            min-width: 24px;
+          }
+        }
+        .signage_cook {
+          @extend .signage_baby;
+          li {
+            border: 2px solid $brown;
+            color: $brown;
+          }
         }
       }
     }
