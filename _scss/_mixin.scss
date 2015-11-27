@@ -1,0 +1,67 @@
+/*---------------------------------------------------------------------------------------
+ mixin
+---------------------------------------------------------------------------------------*/
+
+/*color*/
+$brack: #333;
+$gray: #8C8C8C;
+$brown: #8B572A;
+$boder_white: #dcdcdc;
+$boder_gray: #999;
+$boder_black: #aaa;
+$baby_pink: #fd9696;
+$baby_pink_selected: #ffb4bd;
+$baby_pink_active: #ffecec;
+$food_yellow: #ffc94b;
+$food_yellow_selected: #fff299;
+$food_yellow_blown: #8B572A;
+$food_yellow_active: #fff7d5;
+
+/*image*/
+$img_path: "../images/";
+
+/*角丸*/
+@mixin border_radius($value: 4) {
+  -webkit-border-radius: $value + px;
+  -moz-border-radius: $value + px;
+  -ms-border-radius: $value + px;
+  border-radius: $value + px;
+}
+/*Font size*/
+@mixin fontsize($fontsize) {
+  font-size: $fontsize * 10px;
+  font-size: $fontsize+rem;
+}
+/*透明度*/
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE);
+}
+
+/*box shadow*/
+@mixin box_shadow {
+  -webkit-box-shadow: 0px 0px 5px #999;
+  -moz-box-shadow: 0px 0px 5px #999;
+  box-shadow: 0px 0px 5px #999;
+}
+
+@mixin rotate($value: 5) {
+  -moz-transform: rotate($value + deg);
+  -webkit-transform: rotate($value + deg);
+  -o-transform: rotate($value + deg);
+  -ms-transform: rotate($value + deg);
+}
+
+/*clearfix*/
+@mixin clearfix {
+  *zoom:1;
+  overflow:hidden;
+  &:after{
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility:hidden;
+  }
+}

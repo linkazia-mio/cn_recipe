@@ -1,0 +1,105 @@
+@font-face {
+	font-family: 'cn_recipe';
+	src:url('../fonts/icomoon.eot?y2ywkh');
+	src:url('../fonts/icomoon.eot?y2ywkh#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?y2ywkh') format('truetype'),
+		url('../fonts/icomoon.woff?y2ywkh') format('woff'),
+		url('../fonts/icomoon.svg?y2ywkh#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+	font-family: 'cn_recipe';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon_mushroom:before {
+	content: "\e900";
+}
+.icon_beans:before {
+	content: "\e90f";
+}
+.icon_cook:before {
+	content: "\e91a";
+}
+.icon_star:before {
+	content: "\e919";
+}
+.icon_boil_well:before {
+	content: "\e901";
+}
+.icon_boli:before {
+	content: "\e902";
+}
+.icon_bread:before {
+	content: "\e903";
+}
+.icon_dress:before {
+	content: "\e904";
+}
+.icon_dry:before {
+	content: "\e905";
+}
+.icon_egg:before {
+	content: "\e906";
+}
+.icon_etc:before {
+	content: "\e907";
+}
+.icon_fish:before {
+	content: "\e908";
+}
+.icon_fly:before {
+	content: "\e909";
+}
+.icon_fruit:before {
+	content: "\e90a";
+}
+.icon_grill:before {
+	content: "\e90b";
+}
+.icon_meat:before {
+	content: "\e90c";
+}
+.icon_microwave:before {
+	content: "\e90d";
+}
+.icon_milk:before {
+	content: "\e90e";
+}
+.icon_noodle:before {
+	content: "\e910";
+}
+.icon_potato:before {
+	content: "\e911";
+}
+.icon_rice:before {
+	content: "\e912";
+}
+.icon_seaweed:before {
+	content: "\e913";
+}
+.icon_shellfish:before {
+	content: "\e914";
+}
+.icon_steam:before {
+	content: "\e915";
+}
+.icon_stir_fry:before {
+	content: "\e916";
+}
+.icon_tofu:before {
+	content: "\e917";
+}
+.icon_vegetable:before {
+	content: "\e918";
+}

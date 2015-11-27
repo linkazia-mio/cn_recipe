@@ -1,0 +1,12 @@
+body {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  @include fontsize(1.4);
+  line-height: 1.6;
+  color: $brack;
+}
+h1 {
+  @include fontsize(1.4);
+}
+h2 {
+  @include fontsize(1.4);
+}

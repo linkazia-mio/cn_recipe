@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>お気に入り一覧</title>
+    <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="js/function.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/recipt.css">
+  </head>
+  <body>
+    <!-- favorite/ -->
+    <div class="favorite">
+      <form name="favorite_form" id="favorite_form" method="get" action="#">
+        <!-- favorite_list/ -->
+        <div class="favorite_list">
+          <div class="favorite_lists">
+            <input class="favorite_check" type="checkbox" name="favorite_check" disabled="disabled"></dt>
+            <dl>
+              <dt><img src="http://recipe.coopdeli.jp/wp-content/uploads/151202-01-01-200x150.jpg" alt=""></dt>
+              <dd>
+                <p class="food_name">マッシュポテト・付け合せの材料、雪だるまの作り方</p>
+                <p>「クリスマス☆雪だるまビーフシチュー」のマッシュポテト・付け合せの材料、雪だるまの作り方です。</p>
+                <ul class="signage_cook">
+                  <li class="cook_grill">焼</li>
+                  <li class="baby_dress">和える</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="favorite_lists">
+            <input type="checkbox" name="favorite_check"></dt>
+            <dl>
+              <dt><img src="http://recipe.coopdeli.jp/wp-content/uploads/151202-06-200x150.jpg" alt="ごちそうタラモサラダ"></dt>
+              <dd>
+                <p class="baby_name">ごちそうタラモサラダ</p>
+                <p>手軽に作れるごちそうメニュー♪</p>
+                <ul class="signage_baby">
+                  <li class="baby_1">幼児1歳半頃から</li>
+                  <li class="baby_2">幼児2歳頃から</li>
+                  <li class="baby_3">幼児3歳頃から</li>
+                  <li class="baby_5">離乳食5-6ヵ月頃から</li>
+                  <li class="baby_7">離乳食7-8ヵ月頃から</li>
+                  <li class="baby_9">離乳食9-11ヵ月頃から</li>
+                  <li class="baby_12">離乳食12-18ヵ月頃から</li>
+                </ul>
+                <ul class="signage_cook">
+                  <li class="cook_grill">焼</li>
+                  <li class="baby_dress">和える</li>
+                  <li class="baby_boli">茹でる</li>
+                  <li class="baby_microwave">電子レンジ</li>
+                  <li class="baby_fly">揚</li>
+                  <li class="baby_boilwell">煮</li>
+                  <li class="baby_steam">蒸</li>
+                  <li class="cook_etc">その他</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="favorite_lists">
+            <input type="checkbox" name="favorite_check"></dt>
+            <dl>
+              <dt><img src="http://recipe.coopdeli.jp/wp-content/uploads/151202-02-200x150.jpg" alt="牡蠣とトマトソースのピザ"></dt>
+              <dd>
+                <p class="food_name">牡蠣とトマトソースのピザ</p>
+                <p>かきの風味がおいしい大人のおつまみピザです。</p>
+                <ul class="signage_cook">
+                  <li class="cook_grill">焼</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="favorite_lists">
+            <input type="checkbox" name="favorite_check"></dt>
+            <dl>
+              <dt><img src="http://recipe.coopdeli.jp/wp-content/uploads/15120202_1saihan-200x150.jpg" alt="きな粉のもちもちクレープ"></dt>
+              <dd>
+                <p class="baby_name">きな粉のもちもちクレープ</p>
+                <p>きな粉で和風に 野菜も一緒にどうぞ</p>
+                <ul class="signage_baby">
+                  <li class="baby_2">幼児2歳頃から</li>
+                </ul>
+                <ul class="signage_cook">
+                  <li class="cook_grill">焼</li>
+                  <li class="cook_etc">その他</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- /favorite_list -->
+        <ul class="favorite_btn">
+          <li class="btn_delete"><input id="btn_delete" type="reset" value="編集"><p>削除</p></li>
+          <li class="btn_cancel"><input id="btn_cancel" type="reset" value="キャンセル"></li>
+          <li class="btn_edit"><input id="btn_edit" type="reset" value="編集"><p>編集</p></li>
+        </ul>
+      </form>
+    </div>
+    <!-- /favorite -->
+  </body>
+</html>

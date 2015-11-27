@@ -1,0 +1,881 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------------
+ mixin
+---------------------------------------------------------------------------------------*/
+/*color*/
+/*image*/
+/*角丸*/
+/*Font size*/
+/*透明度*/
+/*box shadow*/
+/*clearfix*/
+/*---------------------------------------------------------------------------------------
+ reset
+---------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+body {
+  font-size: 10px;
+  font-size: 1rem; }
+
+@font-face {
+  font-family: 'cn_recipe';
+  src: url("../fonts/icomoon.eot?y2ywkh");
+  src: url("../fonts/icomoon.eot?y2ywkh#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?y2ywkh") format("truetype"), url("../fonts/icomoon.woff?y2ywkh") format("woff"), url("../fonts/icomoon.svg?y2ywkh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon_"], [class*=" icon_"] {
+  font-family: 'cn_recipe';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon_mushroom:before {
+  content: "\e900"; }
+
+.icon_beans:before {
+  content: "\e90f"; }
+
+.icon_cook:before {
+  content: "\e91a"; }
+
+.icon_star:before {
+  content: "\e919"; }
+
+.icon_boil_well:before {
+  content: "\e901"; }
+
+.icon_boli:before {
+  content: "\e902"; }
+
+.icon_bread:before {
+  content: "\e903"; }
+
+.icon_dress:before {
+  content: "\e904"; }
+
+.icon_dry:before {
+  content: "\e905"; }
+
+.icon_egg:before {
+  content: "\e906"; }
+
+.icon_etc:before {
+  content: "\e907"; }
+
+.icon_fish:before {
+  content: "\e908"; }
+
+.icon_fly:before {
+  content: "\e909"; }
+
+.icon_fruit:before {
+  content: "\e90a"; }
+
+.icon_grill:before {
+  content: "\e90b"; }
+
+.icon_meat:before {
+  content: "\e90c"; }
+
+.icon_microwave:before {
+  content: "\e90d"; }
+
+.icon_milk:before {
+  content: "\e90e"; }
+
+.icon_noodle:before {
+  content: "\e910"; }
+
+.icon_potato:before {
+  content: "\e911"; }
+
+.icon_rice:before {
+  content: "\e912"; }
+
+.icon_seaweed:before {
+  content: "\e913"; }
+
+.icon_shellfish:before {
+  content: "\e914"; }
+
+.icon_steam:before {
+  content: "\e915"; }
+
+.icon_stir_fry:before {
+  content: "\e916"; }
+
+.icon_tofu:before {
+  content: "\e917"; }
+
+.icon_vegetable:before {
+  content: "\e918"; }
+
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333; }
+
+h1 {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+h2 {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+/*search*/
+.search, .narrowing_search {
+  position: relative;
+  /*search_btn*/ }
+  .search .select, .narrowing_search .select {
+    font-size: 0; }
+    .search .select li, .narrowing_search .select li {
+      font-size: 14px;
+      font-size: 1.4rem;
+      display: inline-block;
+      border-top: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+      width: 50%;
+      height: 44px;
+      padding-top: 0;
+      text-align: center;
+      line-height: 44px; }
+      .search .select li:hover, .narrowing_search .select li:hover {
+        cursor: pointer; }
+      .search .select li.btn_baby, .narrowing_search .select li.btn_baby {
+        background: url(../images/icon_baby.svg) no-repeat 4% center;
+        padding-left: 20px;
+        border-bottom: 0; }
+        .search .select li.btn_baby p:before, .narrowing_search .select li.btn_baby p:before {
+          content: "離乳食で検索する"; }
+        .search .select li.btn_baby.active, .narrowing_search .select li.btn_baby.active {
+          background: url(../images/icon_baby.svg) no-repeat 4% center #ffecec;
+          border-top: 4px solid #fd9696;
+          line-height: 39px;
+          border-bottom: 1px solid #dcdcdc; }
+      .search .select li.btn_recipe, .narrowing_search .select li.btn_recipe {
+        background: url(../images/icon_food.svg) no-repeat 5% center;
+        padding-left: 20px;
+        border-bottom: 0; }
+        .search .select li.btn_recipe p:before, .narrowing_search .select li.btn_recipe p:before {
+          content: "レシピで検索する"; }
+        .search .select li.btn_recipe.active, .narrowing_search .select li.btn_recipe.active {
+          background: url(../images/icon_food.svg) no-repeat 5% center #fff7d5;
+          border-top: 4px solid #ffc94b;
+          line-height: 39px;
+          border-bottom: 1px solid #dcdcdc; }
+      .search .select li:last-child, .narrowing_search .select li:last-child {
+        border-right: 0; }
+  .search h2, .narrowing_search h2 {
+    padding: 0 3%;
+    height: 40px;
+    line-height: 40px;
+    bottom: 2%;
+    width: 100%; }
+  .search .search_btn, .narrowing_search .search_btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; }
+    .search .search_btn li, .narrowing_search .search_btn li {
+      display: block;
+      border: none;
+      margin-top: 20px; }
+      .search .search_btn li input[type="submit"], .narrowing_search .search_btn li input[type="submit"], .search .search_btn li input[type="reset"], .narrowing_search .search_btn li input[type="reset"] {
+        -webkit-appearance: none; }
+      .search .search_btn li #btn_clear, .narrowing_search .search_btn li #btn_clear, .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        border: 2px solid #fff;
+        display: block;
+        height: 60px;
+        width: 60px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background: #fd7409; }
+      .search .search_btn li.btn_search, .narrowing_search .search_btn li.btn_search {
+        position: relative; }
+        .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
+          background: url(../images/icon_search_white.svg) no-repeat center 9px #69C711;
+          background-size: 40% auto;
+          height: 0;
+          padding-top: 56px;
+          overflow: hidden; }
+        .search .search_btn li.btn_search p, .narrowing_search .search_btn li.btn_search p {
+          font-size: 11px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          position: absolute;
+          top: 32px;
+          left: 8px;
+          color: #fff; }
+
+.title_baby img, .title_foodrecipe img {
+  width: 100%;
+  height: auto; }
+
+/*baby_search*/
+.baby_search, .recipe_search {
+  padding-bottom: 50px; }
+  .baby_search input, .recipe_search input {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    width: 94%;
+    height: 40px;
+    margin: 20px 3%;
+    padding-left: 30px;
+    line-height: 40px;
+    border: 1px solid #999;
+    background: url("../images/icon_search.svg") no-repeat 5px center; }
+  .baby_search h2, .recipe_search h2 {
+    background: #fd9696;
+    color: #fff; }
+  .baby_search ul, .recipe_search ul {
+    font-size: 0;
+    border-top: 1px solid #999; }
+    .baby_search ul li, .recipe_search ul li {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      width: 25vw;
+      height: 0;
+      padding-top: 25%;
+      overflow: hidden;
+      border-right: 1px solid #999;
+      border-bottom: 1px solid #999; }
+      .baby_search ul li.checked, .recipe_search ul li.checked {
+        background: #ffb4bd;
+        color: #fff;
+        font-weight: bold;
+        position: relative; }
+        .baby_search ul li.checked:after, .recipe_search ul li.checked:after, .baby_search ul li.checked:before, .recipe_search ul li.checked:before {
+          -moz-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          padding-top: 0;
+          content: '';
+          height: 18px;
+          width: 4px;
+          display: block;
+          background: #fff;
+          position: absolute;
+          top: 8px;
+          right: 12px; }
+        .baby_search ul li.checked:before, .recipe_search ul li.checked:before {
+          -moz-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          height: 10px;
+          top: 16px;
+          right: 20px; }
+        .baby_search ul li.checked p, .recipe_search ul li.checked p {
+          color: #fff; }
+      .baby_search ul li:nth-child(4n), .recipe_search ul li:nth-child(4n) {
+        border-right: 0; }
+      .baby_search ul li input[type=checkbox], .recipe_search ul li input[type=checkbox] {
+        position: absolute;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: 100; }
+      .baby_search ul li label, .recipe_search ul li label {
+        font-size: 13px;
+        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 5%; }
+      .baby_search ul li p, .recipe_search ul li p {
+        font-size: 50px;
+        font-size: 5rem;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        color: #8C8C8C;
+        line-height: 100%;
+        height: 100%; }
+        .baby_search ul li p span, .recipe_search ul li p span {
+          display: block;
+          margin-top: 10%; }
+      .baby_search ul li.grill p, .recipe_search ul li.grill p {
+        font-size: 60px;
+        font-size: 6rem; }
+        .baby_search ul li.grill p span, .recipe_search ul li.grill p span {
+          display: block;
+          margin-top: 3%; }
+  .baby_search .months label, .recipe_search .months label, .baby_search .times label, .recipe_search .times label, .recipe_search .genre label, .recipe_search .peoples label {
+    bottom: 35%; }
+
+/*recipe_search*/
+.recipe_search h2 {
+  background: #ffc94b;
+  color: #333; }
+
+.recipe_search ul {
+  font-size: 0; }
+  .recipe_search ul li.checked {
+    background: #fff299;
+    color: #8B572A; }
+    .recipe_search ul li.checked:after, .recipe_search ul li.checked:before {
+      background: #8B572A; }
+    .recipe_search ul li.checked p {
+      color: #8B572A; }
+
+/*result_food*/
+.result_food .search_result .count_hit {
+  background: url(../images/icon_cook.svg) no-repeat 97% center #ffc94b; }
+
+.result_food .narrowing_search .btn_baby {
+  text-align: center; }
+
+.result_food .narrowing_search .select .btn_recipe p:before {
+  content: "レシピで絞り込む"; }
+
+/*result_baby*/
+.result_baby .search_result .count_hit {
+  background: url(../images/icon_cook.svg) no-repeat 97% center #fd9696;
+  color: #fff; }
+
+.result_baby .narrowing_search .btn_baby {
+  position: relative;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background: #fd9696;
+  color: #fff;
+  z-index: 100; }
+  .result_baby .narrowing_search .btn_baby.active:before {
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    bottom: -10px; }
+  .result_baby .narrowing_search .btn_baby:before {
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -6px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    z-index: 10; }
+  .result_baby .narrowing_search .btn_baby:after {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    background: #fd9696;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    z-index: -1; }
+
+.result_baby .narrowing_search .select .btn_baby p:before {
+  content: "離乳食で絞り込む"; }
+
+/*search_result*/
+.search_result .count_hit {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 3%; }
+
+.search_result dl {
+  display: table;
+  width: 94%;
+  margin: 0 3%;
+  padding: 15px 0;
+  table-layout: fixed;
+  border-bottom: 1px solid #dcdcdc; }
+  .search_result dl:last-child {
+    border-bottom: none; }
+  .search_result dl a {
+    text-decoration: none;
+    color: #333; }
+  .search_result dl dt {
+    display: table-cell;
+    width: 44px;
+    vertical-align: middle; }
+    .search_result dl dt img {
+      vertical-align: bottom; }
+  .search_result dl dd {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px; }
+    .search_result dl dd .title_result {
+      font-weight: bold; }
+
+/*search_pager*/
+.search_pager {
+  position: relative;
+  border-top: 1px solid #dcdcdc;
+  height: 44px;
+  line-height: 44px; }
+  .search_pager .prev {
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .search_pager .prev a {
+      display: block;
+      height: 0;
+      padding-top: 44px;
+      overflow: hidden; }
+      .search_pager .prev a:after {
+        -moz-transform: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        display: block;
+        content: '';
+        width: 14px;
+        height: 14px;
+        margin-top: -9px;
+        border-top: 3px solid #999;
+        border-right: 3px solid #999; }
+  .search_pager .page_count {
+    color: #333;
+    text-align: center; }
+  .search_pager .next {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .search_pager .next a {
+      display: block;
+      height: 0;
+      padding-top: 44px;
+      overflow: hidden; }
+      .search_pager .next a:after {
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        display: block;
+        content: '';
+        width: 14px;
+        height: 14px;
+        margin-top: -9px;
+        border-top: 3px solid #999;
+        border-right: 3px solid #999; }
+
+/*narrowing_search*/
+.narrowing_search .btn_recipe {
+  position: relative;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background: #ffc94b;
+  color: #333;
+  z-index: 100; }
+  .narrowing_search .btn_recipe.active:before {
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    bottom: -10px; }
+  .narrowing_search .btn_recipe:before {
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    z-index: 10; }
+  .narrowing_search .btn_recipe:after {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    background: #ffc94b;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    z-index: -1; }
+
+.narrowing_search.active .select {
+  border-bottom: none; }
+
+.narrowing_search .select {
+  border-bottom: 1px solid #dcdcdc; }
+  .narrowing_search .select .btn_recipe.active {
+    border-bottom: none; }
+
+.narrowing_search .search_btn {
+  display: none; }
+
+/*detail_food*/
+.detail_food .main_image, .detail_baby .main_image {
+  text-align: center; }
+  .detail_food .main_image img, .detail_baby .main_image img {
+    -webkit-box-shadow: 0px 0px 5px #999;
+    -moz-box-shadow: 0px 0px 5px #999;
+    box-shadow: 0px 0px 5px #999;
+    -moz-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    margin: 15px auto;
+    border: 6px solid #fff;
+    width: 90%; }
+
+.detail_food p, .detail_baby p {
+  margin: 5px 3%; }
+
+.detail_food .recipe_name, .detail_baby .recipe_name {
+  border-bottom: 4px solid #ffc94b;
+  padding: 2%;
+  margin-bottom: 10px; }
+
+.detail_food .comment, .detail_baby .comment {
+  margin: 20px 0; }
+
+.detail_food .ingredient h2, .detail_baby .ingredient h2, .detail_food .howtocook h2, .detail_baby .howtocook h2, .detail_food .point h2, .detail_baby .point h2 {
+  background: #ffc94b url(../images/icon_ingredient.svg) no-repeat 96% center;
+  padding: 0 3%;
+  height: 40px;
+  line-height: 40px;
+  bottom: 2%;
+  width: 100%; }
+
+.detail_food .ingredient dl, .detail_baby .ingredient dl, .detail_food .howtocook dl, .detail_baby .howtocook dl, .detail_food .point dl, .detail_baby .point dl {
+  font-size: 13px;
+  font-size: 1.3rem;
+  margin: 3%;
+  padding-bottom: 3%;
+  width: 94%;
+  display: table;
+  table-layout: fixed;
+  border-bottom: 1px solid #dcdcdc; }
+  .detail_food .ingredient dl:last-child, .detail_baby .ingredient dl:last-child, .detail_food .howtocook dl:last-child, .detail_baby .howtocook dl:last-child, .detail_food .point dl:last-child, .detail_baby .point dl:last-child {
+    border-bottom: none; }
+  .detail_food .ingredient dl dt, .detail_baby .ingredient dl dt, .detail_food .howtocook dl dt, .detail_baby .howtocook dl dt, .detail_food .point dl dt, .detail_baby .point dl dt {
+    display: table-cell;
+    vertical-align: middle; }
+  .detail_food .ingredient dl dd, .detail_baby .ingredient dl dd, .detail_food .howtocook dl dd, .detail_baby .howtocook dl dd, .detail_food .point dl dd, .detail_baby .point dl dd {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 40%; }
+
+.detail_food .howtocook, .detail_baby .howtocook {
+  *zoom: 1;
+  overflow: hidden; }
+  .detail_food .howtocook:after, .detail_baby .howtocook:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; }
+  .detail_food .howtocook h2, .detail_baby .howtocook h2 {
+    background: #ffc94b url(../images/icon_howtocook.svg) no-repeat 96% center; }
+  .detail_food .howtocook ol, .detail_baby .howtocook ol {
+    font-size: 13px;
+    font-size: 1.3rem;
+    *zoom: 1;
+    overflow: hidden;
+    counter-reset: howto;
+    margin: 20px 3%;
+    width: 94%; }
+    .detail_food .howtocook ol:after, .detail_baby .howtocook ol:after {
+      content: ".";
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden; }
+    .detail_food .howtocook ol li, .detail_baby .howtocook ol li {
+      position: relative;
+      margin-bottom: 3%;
+      list-style-type: none;
+      width: 90%;
+      margin-left: 10%; }
+      .detail_food .howtocook ol li:before, .detail_baby .howtocook ol li:before {
+        position: absolute;
+        left: -10%;
+        top: 0;
+        font-size: 16px;
+        font-size: 1.6rem;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        border-radius: 12px;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        line-height: 24px;
+        color: #fff;
+        display: block;
+        counter-increment: howto;
+        content: counter(howto);
+        background: #bbb;
+        width: 24px;
+        height: 24px; }
+
+.detail_food .point h2, .detail_baby .point h2 {
+  background: #ffc94b url(../images/icon_point.svg) no-repeat 94% center; }
+
+.detail_food .point p, .detail_baby .point p {
+  font-size: 13px;
+  font-size: 1.3rem;
+  margin: 3%; }
+
+/*signage_baby*/
+.signage_baby, .signage_cook, .favorite_list dl dd .signage_cook {
+  font-size: 0px;
+  font-size: 0rem;
+  margin: 0 2%; }
+  .signage_baby li, .signage_cook li, .favorite_list dl dd .signage_cook li {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1%;
+    margin: 3px;
+    display: inline-block;
+    border: 2px solid #fd9696;
+    color: #fd9696;
+    min-width: 26px; }
+
+.signage_cook li {
+  border: 2px solid #8B572A;
+  color: #8B572A; }
+
+/*detail_baby*/
+.detail_baby .recipe_name {
+  border-bottom: 4px solid #fd9696; }
+
+.detail_baby .ingredient, .detail_baby .howtocook, .detail_baby .point {
+  *zoom: 1;
+  overflow: hidden;
+  background: #ffecec; }
+  .detail_baby .ingredient:after, .detail_baby .howtocook:after, .detail_baby .point:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; }
+  .detail_baby .ingredient h2, .detail_baby .howtocook h2, .detail_baby .point h2 {
+    background: #fd9696 url(../images/icon_ingredient.svg) no-repeat 96% center; }
+
+.detail_baby .howtocook h2 {
+  background: #fd9696 url(../images/icon_howtocook.svg) no-repeat 96% center; }
+
+.detail_baby .point h2 {
+  background: #fd9696 url(../images/icon_point.svg) no-repeat 94% center; }
+
+/*favorite*/
+.favorite {
+  /*favorite_btn*/ }
+  .favorite.edit .favorite_btn li.btn_edit, .favorite.edit .favorite_btn li.btn_delete, .favorite.edit .favorite_btn li.btn_cancel {
+    display: none; }
+  .favorite.edit .favorite_btn li.btn_cancel {
+    display: block !important; }
+  .favorite.edit .favorite_btn li.btn_edit, .favorite.edit .favorite_btn li.btn_delete, .favorite.edit .favorite_btn li.btn_cancel {
+    display: none; }
+  .favorite .favorite_btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; }
+    .favorite .favorite_btn li {
+      display: block;
+      border: none;
+      margin-top: 20px; }
+      .favorite .favorite_btn li input[type="submit"], .favorite .favorite_btn li input[type="reset"] {
+        -webkit-appearance: none;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        border: 2px solid #fff;
+        display: block;
+        height: 60px;
+        width: 60px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background: #f5a623; }
+      .favorite .favorite_btn li.btn_edit, .favorite .favorite_btn li.btn_delete, .favorite .favorite_btn li.btn_cancel {
+        position: relative; }
+        .favorite .favorite_btn li.btn_edit #btn_edit, .favorite .favorite_btn li.btn_delete #btn_edit, .favorite .favorite_btn li.btn_cancel #btn_edit {
+          background: url(../images/icon_edit.svg) no-repeat center 9px #f5a623;
+          background-size: 40% auto;
+          height: 0;
+          padding-top: 56px;
+          overflow: hidden; }
+        .favorite .favorite_btn li.btn_edit p, .favorite .favorite_btn li.btn_delete p, .favorite .favorite_btn li.btn_cancel p {
+          font-size: 11px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          position: absolute;
+          top: 35px;
+          left: 19px;
+          color: #fff; }
+      .favorite .favorite_btn li.btn_delete #btn_delete {
+        background: url(../images/icon_trash.svg) no-repeat center 7px #ea7d95;
+        background-size: 40% auto;
+        height: 0;
+        padding-top: 56px;
+        overflow: hidden; }
+      .favorite .favorite_btn li.btn_delete p {
+        top: 38px;
+        left: 19px; }
+      .favorite .favorite_btn li.btn_cancel {
+        position: fixed;
+        display: none;
+        bottom: 10px;
+        right: 10px; }
+        .favorite .favorite_btn li.btn_cancel #btn_cancel {
+          font-size: 11px;
+          font-size: 1.1rem;
+          background: #8C8C8C;
+          background-size: 40% auto;
+          height: 60px;
+          padding-top: 0;
+          overflow: visible; }
+
+/*favorite_list*/
+.favorite_list .favorite_lists {
+  position: relative; }
+  .favorite_list .favorite_lists input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100%; }
+
+.favorite_list dl {
+  height: 100px;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #dcdcdc; }
+  .favorite_list dl dt {
+    display: table-cell;
+    width: 122px;
+    padding-left: 10px;
+    vertical-align: middle; }
+    .favorite_list dl dt img {
+      height: 80px;
+      width: auto;
+      vertical-align: middle; }
+  .favorite_list dl dd {
+    font-size: 11px;
+    font-size: 1.1rem;
+    padding: 0 10px 0 5px;
+    display: table-cell;
+    vertical-align: top;
+    /*signage_baby*/ }
+    .favorite_list dl dd .food_name, .favorite_list dl dd .baby_name {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: url(../images/icon_food.svg) no-repeat center left;
+      padding-left: 20px;
+      border-bottom: 2px solid #ffc94b;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 4px; }
+    .favorite_list dl dd .baby_name {
+      background: url(../images/icon_baby.svg) no-repeat center left;
+      background-size: 18px auto;
+      border-bottom: 2px solid #fd9696; }
+    .favorite_list dl dd .signage_baby, .favorite_list dl dd .signage_cook {
+      margin: 0;
+      display: inline; }
+      .favorite_list dl dd .signage_baby li, .favorite_list dl dd .signage_cook li {
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        border-radius: 100px;
+        font-size: 11px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 1%;
+        margin: 0 2px 2px 0;
+        display: inline-block;
+        border: 2px solid #fd9696;
+        color: #fd9696;
+        min-width: 24px; }
+    .favorite_list dl dd .signage_cook li {
+      border: 2px solid #8B572A;
+      color: #8B572A; }

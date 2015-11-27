@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>レシピ検索</title>
+    <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="js/function.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/recipt.css">
+  </head>
+  <body>
+    <h1>
+      <span class="title_foodrecipe"><img src="images/image_food.png" alt="レシピ検索"></span>
+    </h1>
+    <!-- search/ -->
+    <div class="search">
+      <form name="searchform" id="baby_searchform" method="get" action="#">
+      <!-- recipe_search/ -->
+      <div class="recipe_search">
+        <input name="keywords" id="keywords" value="" type="text" placeholder="キーワードを入力" />
+        <!-- genre/ -->
+        <div class="genre">
+          <h2>レシピジャンル</h2>
+          <ul>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">主食</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">副菜</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">和食</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">洋食</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">中華・アジアン</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">お弁当</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">パーティー</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">汁物・スープ</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">デザート・菓子</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">小鉢・小皿</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">その他</label></li>
+          </ul>
+        </div>
+        <!-- /genre -->
+        <!-- material/ -->
+        <div class="material">
+          <h2>素材(レシピ共通)</h2>
+          <ul>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">肉</label><p><span class="icon_meat"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">貝</label><p><span class="icon_shellfish"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">魚</label><p><span class="icon_fish"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">野菜</label><p><span class="icon_vegetable"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">芋</label><p><span class="icon_potato"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">豆類</label><p><span class="icon_beans"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">豆腐・納豆</label><p><span class="icon_tofu"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">麺類</label><p><span class="icon_noodle"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">パン</label><p><span class="icon_bread"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">卵</label><p><span class="icon_egg"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">乳製品</label><p><span class="icon_milk"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">海藻</label><p><span class="icon_seaweed"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">米</label><p><span class="icon_rice"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">果物</label><p><span class="icon_fruit"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">きのこ</label><p><span class="icon_mushroom"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">乾物</label><p><span class="icon_dry"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">追加項目</label><p><span class="icon_cook"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">その他</label><p><span class="icon_etc"></span></p></li>
+          </ul>
+        </div>
+        <!-- /material -->
+        <!-- method/ -->
+        <div class="method">
+          <h2>調理方法</h2>
+          <ul>
+            <li class="grill"><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">焼く</label><p><span class="icon_grill"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">揚げる</label><p><span class="icon_fly"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">煮る</label><p><span class="icon_boil_well"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">蒸す</label><p><span class="icon_steam"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">茹でる</label><p><span class="icon_boli"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">炒める</label><p><span class="icon_stir_fry"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">和える</label><p><span class="icon_dress"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">電子レンジ</label><p><span class="icon_microwave"></span></p></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">その他</label><p><span class="icon_etc"></span></p></li>
+          </ul>
+        </div>
+        <!-- /method -->
+        <!-- times/ -->
+        <div class="times">
+          <h2>調理時間</h2>
+          <ul>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">5分以内</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">6~10分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">11~15分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">16~30分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">31~60分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">1時間以上</label></li>
+          </ul>
+        </div>
+        <!-- /times -->
+        <!-- peoples/ -->
+        <div class="peoples">
+          <h2>人数</h2>
+          <ul>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">一人分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">二人分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">三人分</label></li>
+            <li><input type="checkbox" name="sample-checkbox" id="checkbox" /><label for="checkbox">四人分以上</label></li>
+          </ul>
+        </div>
+        <!-- /peoples -->
+      </div>
+      <!-- /recipe_search -->
+      <ul class="search_btn">
+        <li class="btn_clear"><input id="btn_clear" type="reset" value="条件を&#13;&#10;クリア"></li>
+        <li class="btn_search"><input id="btn_submit" type="submit" value="検索する"><p>検索する</p></li>
+      </ul>
+      </form>
+    </div>
+    <!-- /search -->
+  </body>
+</html>

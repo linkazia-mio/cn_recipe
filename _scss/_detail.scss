@@ -1,0 +1,157 @@
+/*detail_food*/
+.detail_food {
+  .main_image {
+    text-align: center;
+    img {
+      @include box_shadow;
+      @include rotate(3);
+      margin: 15px auto;
+      border: 6px solid #fff;
+      width: 90%;
+    }
+  }
+  p {
+    margin: 5px 3%;
+  }
+  .recipe_name {
+    border-bottom: 4px solid $food_yellow;
+    padding: 2%;
+    margin-bottom: 10px;
+  }
+  .comment {
+    margin: 20px 0;
+  }
+  .ingredient {
+    h2 {
+      background: $food_yellow url(#{$img_path}icon_ingredient.svg) no-repeat 96% center;
+      padding: 0 3%;
+      height: 40px;
+      line-height: 40px;
+      bottom: 2%;
+      width: 100%;
+    }
+    dl {
+      @include fontsize(1.3);
+      margin: 3%;
+      padding-bottom: 3%;
+      width: 94%;
+      display: table;
+      table-layout: fixed;
+      border-bottom: 1px solid $boder_white;
+      &:last-child {
+        border-bottom: none;
+      }
+      dt {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      dd {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        width: 40%;
+      }
+    }
+  }
+  .howtocook {
+    @extend .ingredient;
+    @include clearfix;
+    h2 {
+      background: $food_yellow url(#{$img_path}icon_howtocook.svg) no-repeat 96% center;
+    }
+    ol {
+      @include fontsize(1.3);
+      @include clearfix;
+      counter-reset:howto;
+      margin: 20px 3%;
+      width: 94%;
+      li {
+        position: relative;
+        margin-bottom: 3%;
+        list-style-type: none;
+        width: 90%;
+        margin-left: 10%;
+        &:before {
+          position: absolute;
+          left: -10%;
+          top: 0;
+          @include fontsize(1.6);
+          @include border_radius(12);
+          font-family: sans-serif;
+          font-weight: bold;
+          text-align: center;
+          line-height: 24px;
+          color: #fff;
+          display: block;
+          counter-increment: howto;
+          content: counter(howto);
+          background: #bbb;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  .point {
+    @extend .ingredient;
+    h2 {
+      background: $food_yellow url(#{$img_path}icon_point.svg) no-repeat 94% center;
+    }
+    p {
+      @include fontsize(1.3);
+      margin: 3%;
+    }
+  }
+}
+
+/*signage_baby*/
+.signage_baby {
+  @include fontsize(0);
+  margin: 0 2%;
+  li {
+    @include border_radius(100);
+    @include fontsize(1.4);
+    font-weight: bold;
+    text-align: center;
+    padding: 1%;
+    margin: 3px;
+    display: inline-block;
+    border: 2px solid $baby_pink;
+    color: $baby_pink;
+    min-width: 26px;
+  }
+}
+.signage_cook {
+  @extend .signage_baby;
+  li {
+    border: 2px solid $brown;
+    color: $brown;
+  }
+}
+
+/*detail_baby*/
+.detail_baby {
+  @extend .detail_food;
+  .recipe_name {
+    border-bottom: 4px solid $baby_pink;
+  }
+  .ingredient {
+    @include clearfix;
+    background: $baby_pink_active;
+    h2 {
+      background: $baby_pink url(#{$img_path}icon_ingredient.svg) no-repeat 96% center;
+    }
+  }
+  .howtocook {
+    @extend .ingredient;
+    h2 {
+      background: $baby_pink url(#{$img_path}icon_howtocook.svg) no-repeat 96% center;
+    }
+  }
+  .point {
+    @extend .ingredient;
+    h2 {
+      background: $baby_pink url(#{$img_path}icon_point.svg) no-repeat 94% center;
+    }
+  }
+}
