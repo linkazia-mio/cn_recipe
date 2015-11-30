@@ -752,6 +752,7 @@ h2 {
     right: 10px;
     z-index: 1000; }
     .favorite .favorite_btn li {
+      list-style: none;
       display: block;
       border: none;
       margin-top: 20px; }
