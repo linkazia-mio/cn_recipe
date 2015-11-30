@@ -12,9 +12,9 @@
           display: none;
         }
         &.btn_cancel {
-          display: block !important;
+          display: block;
         }
-        &.btn_edit {
+        &.btn_delete {
           display: none;
         }
       }
@@ -64,6 +64,7 @@
       }
       &.btn_delete {
         @extend .btn_edit;
+        display: none;
         #btn_delete {
           background: url(#{$img_path}icon_trash.svg) no-repeat center 7px #ea7d95;
           background-size: 40% auto;
@@ -100,7 +101,7 @@
   .favorite_lists {
     position: relative;
     input[type=checkbox]{
-      display: none;
+      @include opacity(0);
       position: absolute;
       width: 100vw;
       height: 100%;

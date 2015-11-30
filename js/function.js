@@ -30,4 +30,13 @@ $(document).ready(function(){
     $('.favorite').removeClass('edit');
     $(".favorite_check").prop("disabled", true);
   });
+  $('.favorite_lists  .favorite_check').click(function(){
+    $('.btn_delete').show();
+    $('.btn_cancel').hide();
+    var check_count = $('.favorite_lists :checked').length;
+    if (check_count == 0 ){
+      $('.btn_delete').hide();
+      $('.btn_cancel').show();
+    }
+  });
 });

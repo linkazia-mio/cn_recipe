@@ -743,8 +743,8 @@ h2 {
   .favorite.edit .favorite_btn li.btn_edit, .favorite.edit .favorite_btn li.btn_delete, .favorite.edit .favorite_btn li.btn_cancel {
     display: none; }
   .favorite.edit .favorite_btn li.btn_cancel {
-    display: block !important; }
-  .favorite.edit .favorite_btn li.btn_edit, .favorite.edit .favorite_btn li.btn_delete, .favorite.edit .favorite_btn li.btn_cancel {
+    display: block; }
+  .favorite.edit .favorite_btn li.btn_delete {
     display: none; }
   .favorite .favorite_btn {
     position: fixed;
@@ -788,15 +788,17 @@ h2 {
           top: 35px;
           left: 19px;
           color: #fff; }
-      .favorite .favorite_btn li.btn_delete #btn_delete {
-        background: url(../images/icon_trash.svg) no-repeat center 7px #ea7d95;
-        background-size: 40% auto;
-        height: 0;
-        padding-top: 56px;
-        overflow: hidden; }
-      .favorite .favorite_btn li.btn_delete p {
-        top: 38px;
-        left: 19px; }
+      .favorite .favorite_btn li.btn_delete {
+        display: none; }
+        .favorite .favorite_btn li.btn_delete #btn_delete {
+          background: url(../images/icon_trash.svg) no-repeat center 7px #ea7d95;
+          background-size: 40% auto;
+          height: 0;
+          padding-top: 56px;
+          overflow: hidden; }
+        .favorite .favorite_btn li.btn_delete p {
+          top: 38px;
+          left: 19px; }
       .favorite .favorite_btn li.btn_cancel {
         position: fixed;
         display: none;
@@ -815,7 +817,8 @@ h2 {
 .favorite_list .favorite_lists {
   position: relative; }
   .favorite_list .favorite_lists input[type=checkbox] {
-    display: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
     position: absolute;
     width: 100vw;
     height: 100%; }
