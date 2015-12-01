@@ -1,5 +1,12 @@
 /*favorite*/
 .favorite {
+  a {
+    position: static;
+    display: block;
+    color: $brack;
+    text-decoration: none;
+    z-index: 100;
+  }
   &.edit {
     .favorite_lists {
       .favorite_check_btn {
@@ -48,7 +55,7 @@
       &.btn_edit {
         position: relative;
         #btn_edit {
-          background: url(#{$img_path}icon_edit.svg) no-repeat center 9px #f5a623;
+          background: url(#{$img_path}icon_edit.svg) no-repeat center 9px #69c711;
           background-size: 40% auto;
           height: 0;
           padding-top: 56px;
@@ -86,7 +93,7 @@
         right: 10px;
         #btn_cancel {
           @include fontsize(1.1);
-          background: $gray;
+          background: #F98500;
           background-size: 40% auto;
           height: 60px;
           padding-top: 0;
@@ -102,21 +109,24 @@
   .favorite_lists {
     position: relative;
     input[type=checkbox]{
-      @include opacity(0);
+      display: none;
       position: absolute;
+      width: 100%;
       width: 100vw;
       height: 100%;
       &:checked + .favorite_check_btn {
-        @include opacity(0.5);
         position: absolute;
+        width: 100%;
         width: 100vw;
         height: 100%;
-        background: url(#{$img_path}check_circle_active.svg) no-repeat 5px center #ffaa1e;
+        background: url(#{$img_path}check_circle_active.svg) no-repeat 5px center rgba(249, 230, 175, 0.22);
+        font-size: inehrit;
       }
     }
     .favorite_check_btn {
       position: absolute;
       display: none;
+      width: 100%;
       width: 100vw;
       height: 100%;
       background: url(#{$img_path}check_circle.svg) no-repeat 5px center;

@@ -118,7 +118,7 @@
 
 /*baby_search*/
 .baby_search {
-  padding-bottom: 50px;
+  padding: 10px 0 50px 0;
   input {
     @include border_radius();
     @include fontsize(1.6);

@@ -19,7 +19,8 @@
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   font-size: 62.5%;
@@ -245,7 +246,7 @@ h2 {
 
 /*baby_search*/
 .baby_search, .recipe_search {
-  padding-bottom: 50px; }
+  padding: 10px 0 50px 0; }
   .baby_search input, .recipe_search input {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -701,11 +702,11 @@ h2 {
     font-weight: bold;
     text-align: center;
     padding: 1%;
-    margin: 3px;
+    margin: 2px;
     display: inline-block;
     border: 2px solid #fd9696;
     color: #fd9696;
-    min-width: 26px; }
+    min-width: 33px; }
 
 .signage_cook li {
   border: 2px solid #8B572A;
@@ -737,6 +738,12 @@ h2 {
 /*favorite*/
 .favorite {
   /*favorite_btn*/ }
+  .favorite a {
+    position: static;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    z-index: 100; }
   .favorite.edit .favorite_lists .favorite_check_btn {
     display: block; }
   .favorite.edit .favorite_btn li.btn_edit, .favorite.edit .favorite_btn li.btn_delete, .favorite.edit .favorite_btn li.btn_cancel {
@@ -775,7 +782,7 @@ h2 {
       .favorite .favorite_btn li.btn_edit, .favorite .favorite_btn li.btn_delete, .favorite .favorite_btn li.btn_cancel {
         position: relative; }
         .favorite .favorite_btn li.btn_edit #btn_edit, .favorite .favorite_btn li.btn_delete #btn_edit, .favorite .favorite_btn li.btn_cancel #btn_edit {
-          background: url(../images/icon_edit.svg) no-repeat center 9px #f5a623;
+          background: url(../images/icon_edit.svg) no-repeat center 9px #69c711;
           background-size: 40% auto;
           height: 0;
           padding-top: 56px;
@@ -807,7 +814,7 @@ h2 {
         .favorite .favorite_btn li.btn_cancel #btn_cancel {
           font-size: 11px;
           font-size: 1.1rem;
-          background: #8C8C8C;
+          background: #F98500;
           background-size: 40% auto;
           height: 60px;
           padding-top: 0;
@@ -817,21 +824,22 @@ h2 {
 .favorite_list .favorite_lists {
   position: relative; }
   .favorite_list .favorite_lists input[type=checkbox] {
-    opacity: 0;
-    filter: alpha(opacity=0);
+    display: none;
     position: absolute;
+    width: 100%;
     width: 100vw;
     height: 100%; }
     .favorite_list .favorite_lists input[type=checkbox]:checked + .favorite_check_btn {
-      opacity: 0.5;
-      filter: alpha(opacity=50);
       position: absolute;
+      width: 100%;
       width: 100vw;
       height: 100%;
-      background: url(../images/check_circle_active.svg) no-repeat 5px center #ffaa1e; }
+      background: url(../images/check_circle_active.svg) no-repeat 5px center rgba(249, 230, 175, 0.22);
+      font-size: inehrit; }
   .favorite_list .favorite_lists .favorite_check_btn {
     position: absolute;
     display: none;
+    width: 100%;
     width: 100vw;
     height: 100%;
     background: url(../images/check_circle.svg) no-repeat 5px center; }

@@ -30,17 +30,33 @@ $(document).ready(function(){
     $('.favorite').removeClass('edit');
     $(".favorite_check").prop("disabled", true);
   });
-  $('.favorite_lists  .favorite_check').click(function(){
-    $('.btn_delete').show();
-    $('.btn_cancel').hide();
-    var check_count = $('.favorite_lists :checked').length;
-    if (check_count == 0 ){
+  // $('.favorite_lists  .favorite_check').click(function(){
+  //   var check_count = $('.favorite_list :checked').length;
+  //   if (check_count == 0 ){
+  //     $('.btn_delete').hide();
+  //     $('.btn_cancel').show();
+  //   }
+  //   else {
+  //     $('.btn_delete').show();
+  //     $('.btn_cancel').hide();
+  //   }
+  // });
+  $('.favorite_lists .favorite_check').click(function(){
+    $(this).toggleClass('checked');
+    if($('.favorite_lists input').hasClass('checked')){
+        $('.btn_delete').show();
+        $('.btn_cancel').hide();
+    }
+    else {
       $('.btn_delete').hide();
       $('.btn_cancel').show();
     }
   });
-  $('.favorite_lists  .btn_delete').click(function(){
+  $('.favorite_btn #btn_delete').click(function(){
     $('.btn_cancel').show();
     $('.btn_delete').hide();
+    if($('.favorite_lists input').hasClass('checked')){
+      $('.favorite_lists input').removeClass('checked');
+    }
   });
 });
