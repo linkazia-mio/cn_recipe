@@ -39,4 +39,8 @@ $(document).ready(function(){
       $('.btn_cancel').show();
     }
   });
+  $('.favorite_lists  .btn_delete').click(function(){
+    $('.btn_cancel').show();
+    $('.btn_delete').hide();
+  });
 });
