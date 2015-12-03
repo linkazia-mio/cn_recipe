@@ -74,13 +74,21 @@
         @extend .btn_edit;
         display: none;
         #btn_delete {
-          background: url(#{$img_path}icon_trash.svg) no-repeat center 7px #ea7d95;
-          background-size: 40% auto;
+          background: #ea7d95;
           height: 0;
           padding-top: 56px;
           overflow: hidden;
         }
         p {
+          &:before {
+            position: absolute;
+            content: url(#{$img_path}icon_trash.svg);
+            top: -31px;
+            left: 0px;
+            display: block;
+            height: 30px;
+            width: 23px;
+          }
           top: 38px;
           left: 19px;
         }
