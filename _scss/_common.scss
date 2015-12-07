@@ -10,3 +10,22 @@ h1 {
 h2 {
   @include fontsize(1.4);
 }
+
+/*404*/
+.error {
+  margin: 20px 3%;
+  text-align: center;
+  h1 {
+    @include fontsize(1.6);
+    text-align: center;
+    border: 2px solid #cede68;
+  }
+  img {
+    margin: 20px auto;
+    width: 80%;
+  }
+  p {
+    @include fontsize(1.4);
+    text-align: left;
+  }
+}

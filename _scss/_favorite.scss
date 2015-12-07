@@ -55,7 +55,7 @@
       &.btn_edit {
         position: relative;
         #btn_edit {
-          background: url(#{$img_path}icon_edit.svg) no-repeat center 9px #69c711;
+          background: url(#{$img_path}icon_edit.svg) no-repeat center 9px $btn_green;
           background-size: 40% auto;
           height: 0;
           padding-top: 56px;
@@ -74,7 +74,7 @@
         @extend .btn_edit;
         display: none;
         #btn_delete {
-          background: #ea7d95;
+          background: $btn_pink;
           height: 0;
           padding-top: 56px;
           overflow: hidden;
@@ -101,7 +101,7 @@
         right: 10px;
         #btn_cancel {
           @include fontsize(1.1);
-          background: #F98500;
+          background: $btn_orange;
           background-size: 40% auto;
           height: 60px;
           padding-top: 0;

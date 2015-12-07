@@ -147,6 +147,23 @@ h2 {
   font-size: 14px;
   font-size: 1.4rem; }
 
+/*404*/
+.error {
+  margin: 20px 3%;
+  text-align: center; }
+  .error h1 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-align: center;
+    border: 2px solid #cede68; }
+  .error img {
+    margin: 20px auto;
+    width: 80%; }
+  .error p {
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: left; }
+
 /*search*/
 .search, .narrowing_search {
   position: relative;
@@ -324,25 +341,26 @@ h2 {
         position: absolute;
         bottom: 5%; }
       .baby_search ul li p, .recipe_search ul li p {
-        font-size: 50px;
-        font-size: 5rem;
+        font-size: 40px;
+        font-size: 4rem;
         width: 100%;
         text-align: center;
         position: absolute;
         top: 0;
         z-index: 1;
         color: #8C8C8C;
-        line-height: 100%;
+        vertical-align: middle;
         height: 100%; }
         .baby_search ul li p span, .recipe_search ul li p span {
           display: block;
-          margin-top: 10%; }
-      .baby_search ul li.grill p, .recipe_search ul li.grill p {
-        font-size: 60px;
-        font-size: 6rem; }
-        .baby_search ul li.grill p span, .recipe_search ul li.grill p span {
-          display: block;
-          margin-top: 3%; }
+          vertical-align: middle;
+          height: 100%;
+          width: 100%; }
+          .baby_search ul li p span:before, .recipe_search ul li p span:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -20px; }
   .baby_search .months label, .recipe_search .months label, .baby_search .times label, .recipe_search .times label, .recipe_search .genre label, .recipe_search .peoples label {
     bottom: 35%; }
 
@@ -585,7 +603,8 @@ h2 {
     -ms-transform: rotate(3deg);
     margin: 15px auto;
     border: 6px solid #fff;
-    width: 90%; }
+    width: 90%;
+    max-width: 800px; }
 
 .detail_food p, .detail_baby p {
   margin: 5px 3%; }
@@ -782,7 +801,7 @@ h2 {
       .favorite .favorite_btn li.btn_edit, .favorite .favorite_btn li.btn_delete, .favorite .favorite_btn li.btn_cancel {
         position: relative; }
         .favorite .favorite_btn li.btn_edit #btn_edit, .favorite .favorite_btn li.btn_delete #btn_edit, .favorite .favorite_btn li.btn_cancel #btn_edit {
-          background: url(../images/icon_edit.svg) no-repeat center 9px #69c711;
+          background: url(../images/icon_edit.svg) no-repeat center 9px #42a838;
           background-size: 40% auto;
           height: 0;
           padding-top: 56px;
@@ -821,7 +840,7 @@ h2 {
         .favorite .favorite_btn li.btn_cancel #btn_cancel {
           font-size: 11px;
           font-size: 1.1rem;
-          background: #F98500;
+          background: #ffaa00;
           background-size: 40% auto;
           height: 60px;
           padding-top: 0;
