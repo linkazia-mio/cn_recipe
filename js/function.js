@@ -30,17 +30,6 @@ $(document).ready(function(){
     $('.favorite').removeClass('edit');
     $(".favorite_check").prop("disabled", true);
   });
-  // $('.favorite_lists  .favorite_check').click(function(){
-  //   var check_count = $('.favorite_list :checked').length;
-  //   if (check_count == 0 ){
-  //     $('.btn_delete').hide();
-  //     $('.btn_cancel').show();
-  //   }
-  //   else {
-  //     $('.btn_delete').show();
-  //     $('.btn_cancel').hide();
-  //   }
-  // });
   $('.favorite_lists .favorite_check').click(function(){
     $(this).toggleClass('checked');
     if($('.favorite_lists input').hasClass('checked')){
