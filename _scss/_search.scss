@@ -103,19 +103,11 @@
         position: relative;
         #btn_submit {
           @extend #btn_clear;
+            @include fontsize(1.1);
           background: url(#{$img_path}icon_search_white.svg) no-repeat center 9px #69C711;
           background-size: 40% auto;
-          height: 0;
-          padding-top: 56px;
+          padding-top: 20px;
           overflow: hidden;
-        }
-        p {
-          @include fontsize(1.1);
-          font-weight: bold;
-          position: absolute;
-          top: 32px;
-          left: 8px;
-          color: #fff;
         }
       }
     }

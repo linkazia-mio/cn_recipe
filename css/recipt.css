@@ -248,19 +248,12 @@ h2 {
       .search .search_btn li.btn_search, .narrowing_search .search_btn li.btn_search {
         position: relative; }
         .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
-          background: url(../images/icon_search_white.svg) no-repeat center 9px #69C711;
-          background-size: 40% auto;
-          height: 0;
-          padding-top: 56px;
-          overflow: hidden; }
-        .search .search_btn li.btn_search p, .narrowing_search .search_btn li.btn_search p {
           font-size: 11px;
           font-size: 1.1rem;
-          font-weight: bold;
-          position: absolute;
-          top: 32px;
-          left: 8px;
-          color: #fff; }
+          background: url(../images/icon_search_white.svg) no-repeat center 9px #69C711;
+          background-size: 40% auto;
+          padding-top: 20px;
+          overflow: hidden; }
 
 .title_baby img, .title_foodrecipe img {
   width: 100%;
