@@ -150,7 +150,7 @@
     border-top: 1px solid $boder_gray;
     li {
       position: relative;
-      display: inline-block;
+      float: left;
       margin: 0;
       width: 25%;
       height: 0;
@@ -217,6 +217,9 @@
         span {
           display: block;
           margin-top: 10%;
+          &.search_text {
+            @include fontsize(1.2);
+          }
         }
       }
     }
