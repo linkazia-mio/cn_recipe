@@ -276,6 +276,9 @@
         span {
           display: block;
           margin-top: 10%;
+          &.search_text {
+            @include fontsize(1.2);
+          }
         }
       }
       &.grill {
