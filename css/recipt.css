@@ -217,13 +217,13 @@ h2 {
           border-top: 4px solid #fd9696;
           line-height: 39px;
           border-bottom: 1px solid #dcdcdc; }
-      .search .select li.btn_recipe, .narrowing_search .select li.btn_recipe {
+      .search .select li.btn_recipe, .narrowing_search .select li.btn_recipe, .search .select .narrowing_search li.btn_baby, .narrowing_search .select li.btn_baby {
         background: url(../images/icon_food.svg) no-repeat 5% center;
         padding-left: 20px;
         border-bottom: 0; }
-        .search .select li.btn_recipe p:before, .narrowing_search .select li.btn_recipe p:before {
+        .search .select li.btn_recipe p:before, .narrowing_search .select li.btn_recipe p:before, .search .select .narrowing_search li.btn_baby p:before, .narrowing_search .select li.btn_baby p:before {
           content: "レシピを検索する"; }
-        .search .select li.btn_recipe.active, .narrowing_search .select li.btn_recipe.active {
+        .search .select li.btn_recipe.active, .narrowing_search .select li.btn_recipe.active, .search .select .narrowing_search li.active.btn_baby, .narrowing_search .select li.active.btn_baby {
           background: url(../images/icon_food.svg) no-repeat 5% center #fff7d5;
           border-top: 4px solid #ffc94b;
           line-height: 39px;
@@ -448,7 +448,7 @@ h2 {
 .result_food .search_result .count_hit {
   background: url(../images/icon_cook.svg) no-repeat 97% center #ffc94b; }
 
-.result_food .narrowing_search .select .btn_recipe p:before {
+.result_food .narrowing_search .select .btn_recipe p:before, .result_food .narrowing_search .select .btn_baby p:before {
   content: "レシピを絞り込む"; }
 
 /*result_baby*/
@@ -550,21 +550,22 @@ h2 {
         transform: rotate(45deg); }
 
 /*narrowing_search*/
-.narrowing_search .btn_recipe {
+.narrowing_search .btn_recipe, .narrowing_search .btn_baby {
   position: relative;
+  margin-bottom: 17px;
   text-align: center;
   height: 40px;
   line-height: 40px;
   background: #ffc94b;
   color: #333;
   z-index: 100; }
-  .narrowing_search .btn_recipe.active:before {
+  .narrowing_search .btn_recipe.active:before, .narrowing_search .active.btn_baby:before {
     -moz-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     bottom: -10px; }
-  .narrowing_search .btn_recipe:before {
+  .narrowing_search .btn_recipe:before, .narrowing_search .btn_baby:before {
     -moz-transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -o-transform: rotate(135deg);
@@ -580,7 +581,7 @@ h2 {
     border-top: 2px solid #333;
     border-right: 2px solid #333;
     z-index: 10; }
-  .narrowing_search .btn_recipe:after {
+  .narrowing_search .btn_recipe:after, .narrowing_search .btn_baby:after {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -596,12 +597,21 @@ h2 {
     height: 40px;
     z-index: -1; }
 
+.narrowing_search .btn_baby {
+  background: #fd9696;
+  color: #fff; }
+  .narrowing_search .btn_baby:before {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff; }
+  .narrowing_search .btn_baby:after {
+    background: #fd9696; }
+
 .narrowing_search.active .select {
   border-bottom: none; }
 
 .narrowing_search .select {
   border-bottom: 1px solid #dcdcdc; }
-  .narrowing_search .select .btn_recipe.active {
+  .narrowing_search .select .btn_recipe.active, .narrowing_search .select .active.btn_baby {
     border-bottom: none; }
 
 .narrowing_search .search_btn {

@@ -499,6 +499,7 @@
   @extend .search;
   .btn_recipe {
     position: relative;
+    margin-bottom: 17px;
     text-align: center;
     height: 40px;
     line-height: 40px;
@@ -537,6 +538,18 @@
       width: 40px;
       height: 40px;
       z-index: -1;
+    }
+  }
+  .btn_baby {
+    @extend .btn_recipe;
+    background: $baby_pink;
+    color: #fff;
+    &:before {
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+    &:after {
+      background: $baby_pink;
     }
   }
   &.active {
