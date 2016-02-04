@@ -16,7 +16,6 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  overflow: hidden;
 }
 body {
   @include fontsize(1.0);
