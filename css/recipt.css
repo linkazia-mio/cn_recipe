@@ -26,8 +26,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  box-sizing: border-box;
-  overflow: hidden; }
+  box-sizing: border-box; }
 
 body {
   font-size: 10px;
@@ -404,18 +403,15 @@ h2 {
         .baby_search ul li p span, .recipe_search ul li p span {
           display: block;
           margin-top: 10%; }
-
+          .baby_search ul li p span.search_text, .recipe_search ul li p span.search_text {
+            font-size: 12px;
+            font-size: 1.2rem; }
       .baby_search ul li.grill p, .recipe_search ul li.grill p {
         font-size: 60px;
         font-size: 6rem; }
         .baby_search ul li.grill p span, .recipe_search ul li.grill p span {
           display: block;
           margin-top: 3%; }
-          
-          .baby_search ul li p span.search_text, .recipe_search ul li p span.search_text {
-            font-size: 12px;
-            font-size: 1.2rem; }
-
   .baby_search .months label, .recipe_search .months label, .baby_search .times label, .recipe_search .times label, .recipe_search .genre label, .recipe_search .peoples label {
     bottom: 40%; }
 
@@ -671,6 +667,31 @@ h2 {
 .detail_food .comment, .detail_baby .comment {
   margin: 20px 0; }
 
+.detail_food .icon_str, .detail_baby .icon_str {
+  font-size: 0px;
+  font-size: 0rem;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  margin: 0 2%; }
+  .detail_food .icon_str li, .detail_baby .icon_str li {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1% 2.5%;
+    margin: 3px;
+    min-width: 7%;
+    display: inline-block; }
+  .detail_food .icon_str .baby, .detail_baby .icon_str .baby {
+    border: 2px solid #fd9696;
+    color: #fd9696; }
+  .detail_food .icon_str .cook, .detail_baby .icon_str .cook {
+    border: 2px solid #8B572A;
+    color: #8B572A; }
+
 .detail_food .ingredient h2, .detail_baby .ingredient h2, .detail_food .howtocook h2, .detail_baby .howtocook h2, .detail_food .point h2, .detail_baby .point h2 {
   background: #ffc94b url(../images/icon_ingredient.svg) no-repeat 96% center;
   padding: 0 3%;
@@ -759,31 +780,6 @@ h2 {
   font-size: 13px;
   font-size: 1.3rem;
   margin: 3%; }
-
-/*signage_baby*/
-.signage_baby, .signage_cook, .favorite_list .favorite_lists dl dd .signage_cook {
-  font-size: 0px;
-  font-size: 0rem;
-  margin: 0 2%; }
-  .signage_baby li, .signage_cook li, .favorite_list .favorite_lists dl dd .signage_cook li {
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1%;
-    margin: 2px;
-    display: inline-block;
-    border: 2px solid #fd9696;
-    color: #fd9696;
-    min-width: 33px; }
-
-.signage_cook li {
-  border: 2px solid #8B572A;
-  color: #8B572A; }
 
 /*detail_baby*/
 .detail_baby .recipe_name {
