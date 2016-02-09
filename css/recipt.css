@@ -256,13 +256,25 @@ h2 {
         font-size: 1.4rem;
         border: 2px solid #fff;
         display: block;
-        height: 60px;
+        height: 0;
+        padding-top: 56px;
+        overflow: hidden;
         width: 60px;
         color: #fff;
         font-weight: bold;
+        background: #FD7409;
+        position: relative; }
+      .search .search_btn li.btn_clear p, .narrowing_search .search_btn li.btn_clear p {
+        position: absolute;
+        top: 35px;
+        color: #fff;
+        width: 55px;
+        height: 60px;
         text-align: center;
-        text-decoration: none;
-        background: #FD7409; }
+        left: 3px;
+        font-weight: bold;
+        line-height: 16px;
+        pointer-events: none; }
       .search .search_btn li.btn_search, .narrowing_search .search_btn li.btn_search {
         position: relative; }
         .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
@@ -278,7 +290,8 @@ h2 {
           position: absolute;
           top: 32px;
           left: 8px;
-          color: #fff; }
+          color: #fff;
+          pointer-events: none; }
 
 .title_baby img, .title_foodrecipe img {
   width: 100%; }
@@ -840,6 +853,7 @@ h2 {
           position: absolute;
           top: 35px;
           left: 19px;
+          pointer-events: none;
           color: #fff; }
       .favorite .favorite_btn li.btn_delete {
         display: none; }
@@ -852,7 +866,8 @@ h2 {
           overflow: hidden; }
         .favorite .favorite_btn li.btn_delete p {
           top: 38px;
-          left: 19px; }
+          left: 19px;
+          pointer-events: none; }
           .favorite .favorite_btn li.btn_delete p:before {
             position: absolute;
             top: -31px;
