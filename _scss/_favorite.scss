@@ -74,7 +74,8 @@
         @extend .btn_edit;
         display: none;
         #btn_delete {
-          background: $btn_pink;
+          background: url(../images/icon_trash.svg) no-repeat center 9px $btn_pink;
+          background-size:40% auto;
           width: 60px;
           height: 60px;
           padding-top: 56px;
@@ -83,7 +84,6 @@
         p {
           &:before {
             position: absolute;
-            content: url(#{$img_path}icon_trash.svg);
             top: -31px;
             left: 0px;
             display: block;

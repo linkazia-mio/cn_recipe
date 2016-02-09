@@ -418,12 +418,6 @@ h2 {
         .baby_search ul li p span, .recipe_search ul li p span {
           display: block;
           margin-top: 10%; }
-<<<<<<< HEAD
-          .baby_search ul li p span.search_text, .recipe_search ul li p span.search_text {
-            font-size: 12px;
-            font-size: 1.2rem; }
-=======
->>>>>>> f5ee416bc1a8619032a1920435f749125b632e02
       .baby_search ul li.grill p, .recipe_search ul li.grill p {
         font-size: 60px;
         font-size: 6rem; }
@@ -850,7 +844,8 @@ h2 {
       .favorite .favorite_btn li.btn_delete {
         display: none; }
         .favorite .favorite_btn li.btn_delete #btn_delete {
-          background: #ea7d95;
+          background: url(../images/icon_trash.svg) no-repeat center 9px #ea7d95;
+          background-size: 40% auto;
           width: 60px;
           height: 60px;
           padding-top: 56px;
@@ -860,7 +855,6 @@ h2 {
           left: 19px; }
           .favorite .favorite_btn li.btn_delete p:before {
             position: absolute;
-            content: url(../images/icon_trash.svg);
             top: -31px;
             left: 0px;
             display: block;
