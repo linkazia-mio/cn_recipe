@@ -43,11 +43,16 @@
 /*search*/
 .search {
   position: relative;
+  overflow: hidden;
+  .select {
+    font-size: 0;
+    height: 44px;
+    overflow: hidden;
     li {
       @include fontsize(1.4);
       display: inline-block;
-      /*border-top: 1px solid $boder_white;
-      border-right: 1px solid $boder_white;*/
+      border-top: 1px solid $boder_white;
+      border-right: 1px solid $boder_white;
       width: 50%;
       height: 44px;
       padding-top: 0;
@@ -62,7 +67,7 @@
         border-bottom: 0;
         p {
           &:before {
-            content: "離乳食で検索する";
+            content: "離乳食を検索する";
           }
         }
         &.active {
@@ -78,7 +83,7 @@
         border-bottom: 0;
         p {
           &:before {
-            content: "レシピで検索する";
+            content: "レシピを検索する";
           }
         }
         &.active {
@@ -88,7 +93,11 @@
           border-bottom: 1px solid $boder_white;
         }
       }
+      &:last-child {
+        border-right: 0;
+      }
     }
+  }
   h2 {
     padding: 0 3%;
     height: 40px;
@@ -99,13 +108,13 @@
   /*search_btn*/
   .search_btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 10px;
     right: 10px;
     z-index: 1000;
     li {
       display: block;
       border: none;
-      margin-top: 40px;
+      margin-top: 20px;
       input[type="submit"],input[type="reset"] {
         -webkit-appearance: none;
       }
@@ -120,16 +129,25 @@
         font-weight: bold;
         text-align: center;
         text-decoration: none;
-        background: #fd7409;
+        background: #FD7409;
       }
       &.btn_search {
+        position: relative;
         #btn_submit {
           @extend #btn_clear;
-            @include fontsize(1.1);
           background: url(#{$img_path}icon_search_white.svg) no-repeat center 9px #69C711;
           background-size: 40% auto;
-          padding-top: 20px;
+          height: 0;
+          padding-top: 56px;
           overflow: hidden;
+        }
+        p {
+          @include fontsize(1.1);
+          font-weight: bold;
+          position: absolute;
+          top: 32px;
+          left: 8px;
+          color: #fff;
         }
       }
     }
@@ -139,8 +157,10 @@
 .title_baby,.title_foodrecipe {
   img {
     width: 100%;
-    height: auto;
   }
+}
+.title_foodrecipe {
+  display:none;
 }
 
 /*baby_search*/
@@ -192,7 +212,6 @@
       }
       &.checked {
         background: $baby_pink_selected;
-        /*border-top: 1px solid $baby_pink_selected;*/
         color: #fff;
         font-weight: bold;
         position:relative;
@@ -244,9 +263,7 @@
         width: 100%;
         text-align: center;
         position: absolute;
-        bottom: 0;
-        display: table;
-        table-layout: fixed;
+        bottom: 5%;
       }
       p {
         @include fontsize(5.0);
@@ -276,9 +293,6 @@
         span {
           display: block;
           margin-top: 10%;
-          &.search_text {
-            @include fontsize(1.2);
-          }
         }
       }
       &.grill {
@@ -294,7 +308,7 @@
   }
   .months {
     label {
-      bottom: 40%;
+      bottom: 35%;
     }
   }
   .times {
@@ -322,7 +336,7 @@
           color: $food_yellow_blown;
           &.search_text {
             span {
-              color: #8B572A;
+              color: $food_yellow_blown;
             }
           }
         }
@@ -345,14 +359,11 @@
     }
   }
   .narrowing_search {
-    .btn_baby {
-      text-align: center;
-    }
     .select {
       .btn_recipe {
         p {
           &:before {
-            content: "レシピで絞り込む";
+            content: "レシピを絞り込む";
           }
         }
       }
@@ -368,46 +379,13 @@
     }
   }
   .narrowing_search {
-    .btn_baby {
-      position: relative;
-      text-align: center;
-      height: 40px;
-      line-height: 40px;
-      background: $baby_pink;
-      color: #fff;
-      z-index: 100;
-      &.active {
-        &:before {
-          @include rotate(-45);
-          bottom: -10px;
+    .select {
+      .btn_baby {
+        p {
+          &:before {
+            content: "離乳食を絞り込む";
+          }
         }
-      }
-      &:before {
-        @include rotate(135);
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 50%;
-        display: block;
-        width: 10px;
-        height: 10px;
-        margin-left: -6px;
-        border-top: 2px solid #fff;
-        border-right: 2px solid #fff;
-        z-index: 10;
-      }
-      &:after {
-        @include border_radius(20);
-        background: $baby_pink;
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -16px;
-        left: 50%;
-        margin-left: -20px;
-        width: 40px;
-        height: 40px;
-        z-index: -1;
       }
     }
   }
@@ -496,7 +474,6 @@
       padding-top: 44px;
       overflow: hidden;
       &:after {
-        @include rotate(45);
         position: absolute;
         top: 50%;
         right: 15px;
@@ -507,6 +484,11 @@
         margin-top: -9px;
         border-top: 3px solid $boder_gray;
         border-right: 3px solid $boder_gray;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
       }
     }
   }
@@ -517,6 +499,7 @@
   @extend .search;
   .btn_recipe {
     position: relative;
+    margin-bottom: 17px;
     text-align: center;
     height: 40px;
     line-height: 40px;
@@ -555,6 +538,18 @@
       width: 40px;
       height: 40px;
       z-index: -1;
+    }
+  }
+  .btn_baby {
+    @extend .btn_recipe;
+    background: $baby_pink;
+    color: #fff;
+    &:before {
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+    &:after {
+      background: $baby_pink;
     }
   }
   &.active {
