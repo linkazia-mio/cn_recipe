@@ -9,6 +9,9 @@ $(document).ready(function(){
   $('.recipe_search ul li').click(function () {
     $(this).toggleClass('checked');
   });
+  $('.narrowing_search .btn_recipe,.narrowing_search .btn_baby').click(function () {
+    $('body').animate({scrollTop:(150)});
+  });
   $('.narrowing_search .btn_baby').click(function() {
     $('.baby_search').animate( { opacity: 'toggle' , height: 'toggle' }, 'fast' );
     $('.search_btn').animate( { height: 'toggle' }, 'fast' );

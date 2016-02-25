@@ -147,6 +147,9 @@ h2 {
   font-size: 14px;
   font-size: 1.4rem; }
 
+input:focus {
+  outline: 0; }
+
 /*404*/
 .error {
   margin: 20px 3%;
@@ -295,9 +298,6 @@ h2 {
 
 .title_baby img, .title_foodrecipe img {
   width: 100%; }
-
-.title_foodrecipe {
-  display: none; }
 
 /*baby_search*/
 .baby_search, .recipe_search {

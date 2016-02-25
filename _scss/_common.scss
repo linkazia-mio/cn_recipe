@@ -11,6 +11,10 @@ h2 {
   @include fontsize(1.4);
 }
 
+input:focus {
+outline: 0;
+}
+
 /*404*/
 .error {
   margin: 20px 3%;
