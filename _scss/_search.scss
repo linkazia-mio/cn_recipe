@@ -123,26 +123,13 @@
         @include fontsize(1.4);
         border: 2px solid #fff;
         display: block;
-        height: 0;
-        padding-top: 56px;
-        overflow: hidden;
+        height: 60px;
         width: 60px;
         color: #fff;
         font-weight: bold;
-        background: #FD7409;
-        position: relative;
-      }
-      &.btn_clear p{
-        position: absolute;
-        top: 35px;
-        color: #fff;
-        width: 55px;
-        height: 60px;
         text-align: center;
-        left: 3px;
-        font-weight: bold;
-        line-height: 16px;
-        pointer-events: none;
+        text-decoration: none;
+        background: #FD7409;
       }
       &.btn_search {
         position: relative;
@@ -161,7 +148,6 @@
           top: 32px;
           left: 8px;
           color: #fff;
-          pointer-events: none;
         }
       }
     }
