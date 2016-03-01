@@ -250,7 +250,7 @@ input:focus {
       margin-top: 20px; }
       .search .search_btn li input[type="submit"], .narrowing_search .search_btn li input[type="submit"], .search .search_btn li input[type="reset"], .narrowing_search .search_btn li input[type="reset"] {
         -webkit-appearance: none; }
-      .search .search_btn li #btn_clear, .narrowing_search .search_btn li #btn_clear, .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
+      .search .search_btn li #btn_clear, .narrowing_search .search_btn li #btn_clear {
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
         -ms-border-radius: 30px;
@@ -267,21 +267,40 @@ input:focus {
         text-decoration: none;
         background: #FD7409; }
       .search .search_btn li.btn_search, .narrowing_search .search_btn li.btn_search {
-        position: relative; }
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        border: 2px solid #fff;
+        display: block;
+        height: 60px;
+        width: 60px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background: url(../images/icon_search_white.svg) no-repeat center 7px #69C711;
+        background-size: 50% auto; }
         .search .search_btn li.btn_search #btn_submit, .narrowing_search .search_btn li.btn_search #btn_submit {
-          background: url(../images/icon_search_white.svg) no-repeat center 9px #69C711;
-          background-size: 40% auto;
-          height: 0;
-          padding-top: 56px;
-          overflow: hidden; }
+          opacity: 0;
+          filter: alpha(opacity=0);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 60px;
+          width: 60px;
+          z-index: 100; }
         .search .search_btn li.btn_search p, .narrowing_search .search_btn li.btn_search p {
           font-size: 11px;
           font-size: 1.1rem;
           font-weight: bold;
           position: absolute;
-          top: 32px;
-          left: 8px;
-          color: #fff; }
+          bottom: 10px;
+          left: 7px;
+          color: #fff;
+          z-index: 10; }
 
 .title_baby img, .title_foodrecipe img {
   width: 100%; }

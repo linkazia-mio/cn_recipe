@@ -132,22 +132,35 @@
         background: #FD7409;
       }
       &.btn_search {
-        position: relative;
+        @include border_radius(30);
+        @include fontsize(1.4);
+        border: 2px solid #fff;
+        display: block;
+        height: 60px;
+        width: 60px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background: url(#{$img_path}icon_search_white.svg) no-repeat center 7px #69C711;
+        background-size: 50% auto;
         #btn_submit {
-          @extend #btn_clear;
-          background: url(#{$img_path}icon_search_white.svg) no-repeat center 9px #69C711;
-          background-size: 40% auto;
-          height: 0;
-          padding-top: 56px;
-          overflow: hidden;
+          @include opacity(0);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 60px;
+          width: 60px;
+          z-index: 100;
         }
         p {
           @include fontsize(1.1);
           font-weight: bold;
           position: absolute;
-          top: 32px;
-          left: 8px;
+          bottom: 10px;
+          left: 7px;
           color: #fff;
+          z-index: 10;
         }
       }
     }
