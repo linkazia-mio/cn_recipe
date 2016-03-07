@@ -118,6 +118,7 @@
 
 /*favorite_list*/
 .favorite_list {
+  margin-bottom: 80px;
   .favorite_lists {
     position: relative;
     input[type=checkbox]{
@@ -156,8 +157,9 @@
         padding-left: 10px;
         vertical-align: middle;
         img {
-          height: 80px;
+          height: auto;
           width: auto;
+          max-width: 107px;
           vertical-align: middle;
         }
       }
