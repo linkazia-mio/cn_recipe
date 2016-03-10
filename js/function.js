@@ -1,3 +1,13 @@
+//画像を先に読み込み
+preload = function(){
+	for(var i = 0; i<arguments.length; i++){
+		jQuery("<img>").attr("src", arguments[i]);
+	}
+};
+preload(
+	"images/check_circle_active.svg",
+	"images/icon_trash.svg"
+);
 $(document).ready(function(){
   $('#btn_clear').click(function () {
     $('.baby_search ul li').removeClass('checked');

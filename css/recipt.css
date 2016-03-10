@@ -637,145 +637,138 @@ input:focus {
   display: none; }
 
 /*detail_food*/
-.detail_food .main_image, .detail_baby .main_image {
-  text-align: center; }
-  .detail_food .main_image img, .detail_baby .main_image img {
-    -webkit-box-shadow: 0px 0px 5px #999;
-    -moz-box-shadow: 0px 0px 5px #999;
-    box-shadow: 0px 0px 5px #999;
-    -moz-transform: rotate(3deg);
-    -webkit-transform: rotate(3deg);
-    -o-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    margin: 15px auto;
-    border: 6px solid #fff;
-    width: 90%;
-    max-width: 800px; }
-
-.detail_food p, .detail_baby p {
-  margin: 5px 3%; }
-
-.detail_food .recipe_name, .detail_baby .recipe_name {
-  border-bottom: 4px solid #ffc94b;
-  padding: 2%;
-  margin-bottom: 10px; }
-
-.detail_food .comment, .detail_baby .comment {
-  margin: 20px 0; }
-
-.detail_food .icon_str, .detail_baby .icon_str {
-  font-size: 0px;
-  font-size: 0rem;
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
-  margin: 0 2%; }
-  .detail_food .icon_str li, .detail_baby .icon_str li {
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1% 2.5%;
-    margin: 3px;
-    min-width: 7%;
-    display: inline-block; }
-  .detail_food .icon_str .baby, .detail_baby .icon_str .baby {
-    border: 2px solid #fd9696;
-    color: #fd9696; }
-  .detail_food .icon_str .cook, .detail_baby .icon_str .cook {
-    border: 2px solid #8B572A;
-    color: #8B572A; }
-
-.detail_food .ingredient h2, .detail_baby .ingredient h2, .detail_food .howtocook h2, .detail_baby .howtocook h2, .detail_food .point h2, .detail_baby .point h2 {
-  background: #ffc94b url(../images/icon_ingredient.svg) no-repeat 96% center;
-  padding: 0 3%;
-  height: 40px;
-  line-height: 40px;
-  bottom: 2%;
-  width: 100%; }
-
-.detail_food .ingredient dl, .detail_baby .ingredient dl, .detail_food .howtocook dl, .detail_baby .howtocook dl, .detail_food .point dl, .detail_baby .point dl {
-  font-size: 13px;
-  font-size: 1.3rem;
-  margin: 3%;
-  padding-bottom: 3%;
-  width: 94%;
-  display: table;
-  table-layout: fixed;
-  border-bottom: 1px solid #dcdcdc; }
-  .detail_food .ingredient dl:last-child, .detail_baby .ingredient dl:last-child, .detail_food .howtocook dl:last-child, .detail_baby .howtocook dl:last-child, .detail_food .point dl:last-child, .detail_baby .point dl:last-child {
-    border-bottom: none; }
-  .detail_food .ingredient dl dt, .detail_baby .ingredient dl dt, .detail_food .howtocook dl dt, .detail_baby .howtocook dl dt, .detail_food .point dl dt, .detail_baby .point dl dt {
-    display: table-cell;
-    vertical-align: middle; }
-  .detail_food .ingredient dl dd, .detail_baby .ingredient dl dd, .detail_food .howtocook dl dd, .detail_baby .howtocook dl dd, .detail_food .point dl dd, .detail_baby .point dl dd {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-    width: 40%; }
-
-.detail_food .howtocook, .detail_baby .howtocook {
-  *zoom: 1;
-  overflow: hidden; }
-  .detail_food .howtocook:after, .detail_baby .howtocook:after {
-    content: ".";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden; }
-  .detail_food .howtocook h2, .detail_baby .howtocook h2 {
-    background: #ffc94b url(../images/icon_howtocook.svg) no-repeat 96% center; }
-  .detail_food .howtocook ol, .detail_baby .howtocook ol {
+.detail_food, .detail_baby {
+  margin-bottom: 80px; }
+  .detail_food .main_image, .detail_baby .main_image {
+    text-align: center; }
+    .detail_food .main_image img, .detail_baby .main_image img {
+      -webkit-box-shadow: 0px 0px 5px #999;
+      -moz-box-shadow: 0px 0px 5px #999;
+      box-shadow: 0px 0px 5px #999;
+      -moz-transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      margin: 15px auto;
+      border: 6px solid #fff;
+      width: 90%;
+      max-width: 800px; }
+  .detail_food p, .detail_baby p {
+    margin: 5px 3%; }
+  .detail_food .recipe_name, .detail_baby .recipe_name {
+    border-bottom: 4px solid #ffc94b;
+    padding: 2%;
+    margin-bottom: 10px; }
+  .detail_food .comment, .detail_baby .comment {
+    margin: 20px 0; }
+  .detail_food .icon_str, .detail_baby .icon_str {
+    font-size: 0px;
+    font-size: 0rem;
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+    margin: 0 2%; }
+    .detail_food .icon_str li, .detail_baby .icon_str li {
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 1% 2.5%;
+      margin: 3px;
+      min-width: 7%;
+      display: inline-block; }
+    .detail_food .icon_str .baby, .detail_baby .icon_str .baby {
+      border: 2px solid #fd9696;
+      color: #fd9696; }
+    .detail_food .icon_str .cook, .detail_baby .icon_str .cook {
+      border: 2px solid #8B572A;
+      color: #8B572A; }
+  .detail_food .ingredient h2, .detail_baby .ingredient h2, .detail_food .howtocook h2, .detail_baby .howtocook h2, .detail_food .point h2, .detail_baby .point h2 {
+    background: #ffc94b url(../images/icon_ingredient.svg) no-repeat 96% center;
+    padding: 0 3%;
+    height: 40px;
+    line-height: 40px;
+    bottom: 2%;
+    width: 100%; }
+  .detail_food .ingredient dl, .detail_baby .ingredient dl, .detail_food .howtocook dl, .detail_baby .howtocook dl, .detail_food .point dl, .detail_baby .point dl {
     font-size: 13px;
     font-size: 1.3rem;
+    margin: 3%;
+    padding-bottom: 3%;
+    width: 94%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: 1px solid #dcdcdc; }
+    .detail_food .ingredient dl:last-child, .detail_baby .ingredient dl:last-child, .detail_food .howtocook dl:last-child, .detail_baby .howtocook dl:last-child, .detail_food .point dl:last-child, .detail_baby .point dl:last-child {
+      border-bottom: none; }
+    .detail_food .ingredient dl dt, .detail_baby .ingredient dl dt, .detail_food .howtocook dl dt, .detail_baby .howtocook dl dt, .detail_food .point dl dt, .detail_baby .point dl dt {
+      display: table-cell;
+      vertical-align: middle; }
+    .detail_food .ingredient dl dd, .detail_baby .ingredient dl dd, .detail_food .howtocook dl dd, .detail_baby .howtocook dl dd, .detail_food .point dl dd, .detail_baby .point dl dd {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      width: 40%; }
+  .detail_food .howtocook, .detail_baby .howtocook {
     *zoom: 1;
-    overflow: hidden;
-    counter-reset: howto;
-    margin: 20px 3%;
-    width: 94%; }
-    .detail_food .howtocook ol:after, .detail_baby .howtocook ol:after {
+    overflow: hidden; }
+    .detail_food .howtocook:after, .detail_baby .howtocook:after {
       content: ".";
       display: block;
       clear: both;
       height: 0;
       visibility: hidden; }
-    .detail_food .howtocook ol li, .detail_baby .howtocook ol li {
-      position: relative;
-      margin-bottom: 3%;
-      list-style-type: none;
-      width: 90%;
-      margin-left: 10%; }
-      .detail_food .howtocook ol li:before, .detail_baby .howtocook ol li:before {
-        position: absolute;
-        left: -10%;
-        top: 0;
-        font-size: 16px;
-        font-size: 1.6rem;
-        -webkit-border-radius: 12px;
-        -moz-border-radius: 12px;
-        -ms-border-radius: 12px;
-        border-radius: 12px;
-        font-family: sans-serif;
-        font-weight: bold;
-        text-align: center;
-        line-height: 24px;
-        color: #fff;
+    .detail_food .howtocook h2, .detail_baby .howtocook h2 {
+      background: #ffc94b url(../images/icon_howtocook.svg) no-repeat 96% center; }
+    .detail_food .howtocook ol, .detail_baby .howtocook ol {
+      font-size: 13px;
+      font-size: 1.3rem;
+      *zoom: 1;
+      overflow: hidden;
+      counter-reset: howto;
+      margin: 20px 3%;
+      width: 94%; }
+      .detail_food .howtocook ol:after, .detail_baby .howtocook ol:after {
+        content: ".";
         display: block;
-        counter-increment: howto;
-        content: counter(howto);
-        background: #bbb;
-        width: 24px;
-        height: 24px; }
-
-.detail_food .point h2, .detail_baby .point h2 {
-  background: #ffc94b url(../images/icon_point.svg) no-repeat 94% center; }
-
-.detail_food .point p, .detail_baby .point p {
-  font-size: 13px;
-  font-size: 1.3rem;
-  margin: 3%; }
+        clear: both;
+        height: 0;
+        visibility: hidden; }
+      .detail_food .howtocook ol li, .detail_baby .howtocook ol li {
+        position: relative;
+        margin-bottom: 3%;
+        list-style-type: none;
+        width: 90%;
+        margin-left: 10%; }
+        .detail_food .howtocook ol li:before, .detail_baby .howtocook ol li:before {
+          position: absolute;
+          left: -10%;
+          top: 0;
+          font-size: 16px;
+          font-size: 1.6rem;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          border-radius: 12px;
+          font-family: sans-serif;
+          font-weight: bold;
+          text-align: center;
+          line-height: 24px;
+          color: #fff;
+          display: block;
+          counter-increment: howto;
+          content: counter(howto);
+          background: #bbb;
+          width: 24px;
+          height: 24px; }
+  .detail_food .point h2, .detail_baby .point h2 {
+    background: #ffc94b url(../images/icon_point.svg) no-repeat 94% center; }
+  .detail_food .point p, .detail_baby .point p {
+    font-size: 13px;
+    font-size: 1.3rem;
+    margin: 3%; }
 
 /*detail_baby*/
 .detail_baby .recipe_name {
