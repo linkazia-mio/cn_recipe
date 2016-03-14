@@ -75,26 +75,21 @@
         @extend .btn_edit;
         display: none;
         #btn_delete {
-          background: url(../images/icon_trash.svg) no-repeat center 9px $btn_pink;
-          background-size:40% auto;
-          width: 60px;
-          height: 60px;
+          background: url(#{$img_path}icon_trash.png) no-repeat center 6px $btn_pink;
+          background-size: 40% auto;
+          -webkit-background-size: 40% auto;
+          height: 0;
           padding-top: 56px;
           overflow: hidden;
         }
         p {
-          &:before {
-            position: absolute;
-            top: -31px;
-            left: 0px;
-            display: block;
-            height: 30px;
-            width: 23px;
-          }
-          top: 38px;
+          @include fontsize(1.1);
+          font-weight: bold;
+          position: absolute;
+          top: 37px;
           left: 19px;
           pointer-events: none;
-
+          color: #fff;
         }
       }
       &.btn_cancel {
