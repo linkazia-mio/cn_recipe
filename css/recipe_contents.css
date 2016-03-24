@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.contents ul li {
+  list-style: none;
+  margin-top: 20px;
+  text-align: center; }
+  .contents ul li a {
+    display: block; }
+  .contents ul li img {
+    width: 90%;
+    height: auto; }

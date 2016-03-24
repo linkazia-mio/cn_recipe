@@ -1,26 +1,26 @@
 @font-face {
-	font-family: 'cn_recipe';
-	src:url('../fonts/icomoon.eot?y2ywkh');
-	src:url('../fonts/icomoon.eot?y2ywkh#iefix') format('embedded-opentype'),
-	url('../fonts/icomoon.woff?y2ywkh') format('woff'),
-	url('../fonts/icomoon.svg?y2ywkh#icomoon') format('svg'),
-	url('../fonts/icomoon.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'cn_recipe';
+  src:url('../fonts/icomoon.eot?y2ywkh');
+  src:url('../fonts/icomoon.eot?y2ywkh#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.woff?y2ywkh') format('woff'),
+  url('../fonts/icomoon.svg?y2ywkh#icomoon') format('svg'),
+  url('../fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon_"], [class*=" icon_"] {
-	font-family: 'cn_recipe';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  font-family: 'cn_recipe';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .icon_beans:before {
     content: "\e8db";

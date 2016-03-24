@@ -971,11 +971,3 @@ input:focus {
         .favorite_list .favorite_lists dl dd .signage_cook li {
           border: 2px solid #8B572A;
           color: #8B572A; }
-
-.contents ul li {
-  margin-top: 20px; }
-  .contents ul li img {
-    width: 100%;
-    height: auto; }
-  .contents ul li a {
-    display: block; }
