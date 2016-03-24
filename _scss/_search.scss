@@ -227,20 +227,20 @@
         position:relative;
         &:after, &:before {
           @include rotate(45);
-        	content:'';
-        	height:18px;
-        	width:4px;
-        	display:block;
-        	background:#fff;
-        	position:absolute;
-        	top:8px;
-        	right:12px;
+          content:'';
+          height:18px;
+          width:4px;
+          display:block;
+          background:#fff;
+          position:absolute;
+          top:8px;
+          right:12px;
         }
         &:before {
           @include rotate(-45);
-        	height:10px;
-        	top:16px;
-        	right:20px
+          height:10px;
+          top:16px;
+          right:20px
         }
         p {
           color: #fff;
@@ -338,7 +338,7 @@
         background: $food_yellow_selected;
         color: $food_yellow_blown;
         &:after, &:before{
-        	background:$food_yellow_blown;
+          background:$food_yellow_blown;
         }
         p {
           color: $food_yellow_blown;
