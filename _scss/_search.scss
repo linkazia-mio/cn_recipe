@@ -255,18 +255,16 @@
         border-right: 0;
       }
       input[type=checkbox] {
-        position: absolute;
         @include opacity(0);
         @include fontsize(6);
+        position: absolute;
+        -webkit-appearance: none;
         top: 0;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
         z-index: 100;
-        &#checkbox {
-          -webkit-appearance: none;
-        }
       }
       label {
         @include fontsize(1.3);
