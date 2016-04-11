@@ -1,5 +1,6 @@
 /*favorite*/
 .favorite {
+  overflow: hidden;
   a {
     position: static;
     display: block;
@@ -113,7 +114,10 @@
 
 /*favorite_list*/
 .favorite_list {
+  height: 100%;
+  overflow: auto;
   margin-bottom: 80px;
+  -webkit-overflow-scrolling: touch;
   .favorite_lists {
     position: relative;
     input[type=checkbox]{

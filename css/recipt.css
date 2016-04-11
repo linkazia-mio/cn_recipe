@@ -794,6 +794,7 @@ input:focus {
 
 /*favorite*/
 .favorite {
+  overflow: hidden;
   /*favorite_btn*/ }
   .favorite a {
     position: static;
@@ -887,7 +888,10 @@ input:focus {
 
 /*favorite_list*/
 .favorite_list {
-  margin-bottom: 80px; }
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 80px;
+  -webkit-overflow-scrolling: touch; }
   .favorite_list .favorite_lists {
     position: relative; }
     .favorite_list .favorite_lists input[type=checkbox] {
