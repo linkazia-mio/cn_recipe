@@ -220,6 +220,21 @@
       &.search_list_5 {
         z-index: 26;
       }
+      &.search_list_6 {
+        z-index: 25;
+      }
+      &.search_list_7 {
+        z-index: 24;
+      }
+      &.search_list_8 {
+        z-index: 23;
+      }
+      &.search_list_9 {
+        z-index: 22;
+      }
+      &.search_list_10 {
+        z-index: 21;
+      }
       &.checked {
         background: $baby_pink_selected;
         color: #fff;
@@ -574,6 +589,9 @@
     }
   }
   .search_btn {
+    display: none;
+  }
+  .search_condition {
     display: none;
   }
 }
