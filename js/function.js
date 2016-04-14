@@ -36,11 +36,13 @@ $(document).ready(function(){
     $('.favorite_btn #btn_edit').click(function() {
       $('.favorite_list dl').animate( { paddingLeft: '30px', }, 'fast' );
       $('.favorite').addClass('edit');
+      $('.btn_cancel').show();
       $(".favorite_check").prop("disabled", false);
     });
     $('.favorite_btn #btn_cancel').click(function() {
       $('.favorite_list dl').animate( { paddingLeft: '0', }, 'fast' );
       $('.favorite').removeClass('edit');
+      $('.btn_cancel').hide();
       $(".favorite_check").prop("disabled", true);
     });
     $('.favorite_lists .favorite_check').click(function(){
