@@ -891,9 +891,8 @@ input:focus {
           pointer-events: none;
           color: #fff; }
       .favorite .favorite_btn li.btn_cancel {
-        position: fixed;
-        bottom: 10px;
-        right: 10px; }
+        display: none;
+        bottom: 0; }
         .favorite .favorite_btn li.btn_cancel #btn_cancel {
           font-size: 11px;
           font-size: 1.1rem;

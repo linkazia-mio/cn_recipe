@@ -95,9 +95,8 @@
       }
       &.btn_cancel {
         @extend .btn_edit;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
+        display: none;
+        bottom: 0;
         #btn_cancel {
           @include fontsize(1.1);
           background: $btn_orange;
