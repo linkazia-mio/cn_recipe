@@ -10,4 +10,5 @@
     display: block; }
   .contents ul li img {
     width: 90%;
-    height: auto; }
+    height: auto;
+    border: 1px solid #dcdcdc; }
